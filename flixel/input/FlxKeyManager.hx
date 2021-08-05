@@ -144,7 +144,7 @@ class FlxKeyManager<Key:Int, KeyList:FlxBaseKeyList> implements IFlxInputManager
 	 */
 	public function checkStatus(KeyCode:Key, Status:FlxInputState):Bool
 	{
-		return switch (KeyCode)
+		return switch (KeyCode : Int)
 		{
 			case FlxKey.ANY:
 				switch (Status)
