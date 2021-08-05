@@ -166,7 +166,7 @@ class FlxBitmapFont extends FlxFramesCollection
 	 * @param   Data     Font data.
 	 * @return  Generated bitmap font object.
 	 */
-	public static function fromAngelCode(Source:FlxBitmapFontGraphicAsset, Data:FlxAngelCodeSource):FlxBitmapFont
+	public static function fromAngelCode(Source:FlxBitmapFontGraphicAsset, Data:FlxAngelCodeSource, ?Unique:Bool = false):FlxBitmapFont
 	{
 		var graphic:FlxGraphic = null;
 		var frame:FlxFrame = null;
@@ -178,7 +178,7 @@ class FlxBitmapFont extends FlxFramesCollection
 		}
 		else
 		{
-			graphic = FlxG.bitmap.add(cast Source);
+			graphic = FlxG.bitmap.add(cast Source, Unique);
 			frame = graphic.imageFrame.frame;
 		}
 
